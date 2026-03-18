@@ -645,12 +645,60 @@
             closeModal();
         }
         
-        // Pipeline data storage (in-memory for now, could be persisted)
+        // Pipeline data storage with localStorage persistence
+        const STORAGE_KEY = 'olympus_pipeline_v1';
         let pipelineData = {
             pending: [],
             approved: [],
             published: []
         };
+        let serverPendingIds = new Set(); // Track which IDs came from server
+        
+        // Load pipeline from localStorage on startup
+        function loadPipelineFromStorage() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    pipelineData.approved = parsed.approved || [];
+                    pipelineData.published = parsed.published || [];
+                    console.log('Loaded pipeline from storage:', pipelineData);
+                }
+            } catch (e) {
+                console.error('Failed to load pipeline from storage:', e);
+            }
+        }
+        
+        // Save pipeline to localStorage
+        function savePipelineToStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                    approved: pipelineData.approved,
+                    published: pipelineData.published
+                }));
+            } catch (e) {
+                console.error('Failed to save pipeline:', e);
+            }
+        }
+        
+        // Merge server data with local pipeline
+        function mergePipelineWithServer(serverPending) {
+            // Update server ID tracking
+            serverPendingIds = new Set((serverPending || []).map(i => i.id));
+            
+            // Filter local approved/published to remove items that are back in pending (edge case)
+            pipelineData.approved = pipelineData.approved.filter(i => !serverPendingIds.has(i.id));
+            
+            // Pending = server pending minus anything we've already approved locally
+            const localApprovedIds = new Set(pipelineData.approved.map(i => i.id));
+            const localPublishedIds = new Set(pipelineData.published.map(i => i.id));
+            
+            pipelineData.pending = (serverPending || []).filter(i => {
+                return !localApprovedIds.has(i.id) && !localPublishedIds.has(i.id);
+            });
+            
+            savePipelineToStorage();
+        }
         
         function renderPending(items) {
             pipelineData.pending = items || [];
@@ -802,6 +850,9 @@
                 pipelineData.approved.push(item);
                 pipelineData.pending.splice(itemIndex, 1);
                 
+                // Save to localStorage
+                savePipelineToStorage();
+                
                 // Re-render
                 renderPending(pipelineData.pending);
                 renderApproved(pipelineData.approved);
@@ -825,6 +876,9 @@
                 // Move to published
                 pipelineData.published.unshift(item);
                 pipelineData.approved.splice(itemIndex, 1);
+                
+                // Save to localStorage
+                savePipelineToStorage();
                 
                 // Re-render
                 renderApproved(pipelineData.approved);
@@ -923,16 +977,17 @@
                     lastData = data;
                     renderAgents(data.agents);
                     
-                    // Handle new contentPipeline structure or old approvals structure
+                    // Handle pipeline with localStorage persistence
                     if (data.contentPipeline) {
-                        renderPending(data.contentPipeline.pendingApproval);
-                        renderApproved(data.contentPipeline.approved);
-                        renderPublished(data.contentPipeline.published);
+                        mergePipelineWithServer(data.contentPipeline.pendingApproval);
                     } else if (data.approvals) {
-                        renderPending(data.approvals);
-                        renderApproved([]);
-                        renderPublished([]);
+                        mergePipelineWithServer(data.approvals);
                     }
+                    
+                    // Render from local pipeline state (preserves approved/published)
+                    renderPending(pipelineData.pending);
+                    renderApproved(pipelineData.approved);
+                    renderPublished(pipelineData.published);
                     
                     renderFinances(data.finances);
                     renderProjects(data.projects);
@@ -946,6 +1001,7 @@
         }
         
         // Initial load
+        loadPipelineFromStorage();
         fetchData();
         
         // Refresh every 30 seconds
