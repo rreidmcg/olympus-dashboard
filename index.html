@@ -290,7 +290,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -302,34 +302,74 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 24px;
-            max-width: 500px;
+            max-width: 700px;
             width: 100%;
-            max-height: 80vh;
+            max-height: 85vh;
             overflow-y: auto;
         }
-        .modal-content h3 {
-            margin-bottom: 15px;
-            color: var(--text);
+        .modal-content.approval-modal {
+            max-width: 800px;
         }
-        .modal-content h4 {
-            margin: 20px 0 10px;
+        .modal-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .modal-header h3 {
+            margin: 0 0 8px 0;
+            color: var(--text);
+            font-size: 20px;
+        }
+        .modal-meta {
             color: var(--text-muted);
+            font-size: 13px;
+            margin: 0;
+        }
+        .modal-body {
+            margin-bottom: 20px;
+        }
+        .modal-body .description {
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+        }
+        .content-preview {
+            margin-top: 20px;
+        }
+        .content-preview h4 {
+            color: var(--yellow);
             font-size: 14px;
             text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
         }
-        .modal-content p {
-            margin-bottom: 10px;
+        .content-text {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
             color: var(--text);
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
         }
         .modal-actions {
             display: flex;
             gap: 10px;
             margin: 20px 0;
             flex-wrap: wrap;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
         }
         .modal-actions button,
         .btn-close {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
@@ -511,14 +551,23 @@
         function showApprovalModal(item) {
             const modal = document.createElement('div');
             modal.className = 'modal';
+            const contentDisplay = item.content ? 
+                `<div class="content-preview">
+                    <h4>📄 Content Preview</h4>
+                    <pre class="content-text">${escapeHtml(item.content)}</pre>
+                </div>` : '';
             modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>${item.title}</h3>
-                    <p>${item.description}</p>
-                    <p><strong>By:</strong> ${item.agent}</p>
-                    ${item.cost > 0 ? `<p><strong>Cost:</strong> $${item.cost}</p>` : ''}
+                <div class="modal-content approval-modal">
+                    <div class="modal-header">
+                        <h3>${item.title}</h3>
+                        <p class="modal-meta">By ${item.agent} • ${timeAgo(item.createdAt)}${item.cost > 0 ? ` • $${item.cost}` : ''}</p>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description">${item.description}</p>
+                        ${contentDisplay}
+                    </div>
                     <div class="modal-actions">
-                        <button class="btn-approve" onclick="approveItem('${item.id}')">✅ Approve</button>
+                        <button class="btn-approve" onclick="approveItem('${item.id}')">✅ Approve & Publish</button>
                         <button class="btn-edit" onclick="editItem('${item.id}')">✏️ Request Changes</button>
                         <button class="btn-deny" onclick="denyItem('${item.id}')">❌ Deny</button>
                     </div>
@@ -526,6 +575,12 @@
                 </div>
             `;
             document.body.appendChild(modal);
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
         
         // Modal for projects
