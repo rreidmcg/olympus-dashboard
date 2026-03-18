@@ -1,0 +1,121 @@
+{
+  "lastUpdated": "2026-03-18T06:00:00Z",
+  "agents": [
+    {
+      "name": "Zeus",
+      "role": "Chief of Staff",
+      "status": "online",
+      "currentTask": "Overseeing operations",
+      "nextRun": null
+    },
+    {
+      "name": "Atlas",
+      "role": "Research",
+      "status": "idle",
+      "currentTask": "Completed morning research",
+      "nextRun": "2026-03-19T06:00:00Z"
+    },
+    {
+      "name": "Scribe",
+      "role": "Content",
+      "status": "idle",
+      "currentTask": "Drafts ready for approval",
+      "nextRun": "2026-03-19T07:30:00Z"
+    },
+    {
+      "name": "Hephaestus",
+      "role": "Engineering",
+      "status": "idle",
+      "currentTask": "On demand",
+      "nextRun": null
+    },
+    {
+      "name": "Hermes",
+      "role": "Growth",
+      "status": "idle",
+      "currentTask": "Awaiting approval",
+      "nextRun": null
+    },
+    {
+      "name": "Hera",
+      "role": "Finance",
+      "status": "idle",
+      "currentTask": "Weekly audit pending",
+      "nextRun": "2026-03-22T20:00:00Z"
+    },
+    {
+      "name": "Athena",
+      "role": "Strategy",
+      "status": "idle",
+      "currentTask": "Weekly review pending",
+      "nextRun": "2026-03-24T06:00:00Z"
+    }
+  ],
+  "approvals": [
+    {
+      "id": "newsletter-001",
+      "type": "content",
+      "title": "Newsletter: The Fire Doesn't Care About Your Feelings",
+      "agent": "Scribe",
+      "createdAt": "2026-03-18T07:30:00Z",
+      "cost": 0,
+      "description": "500-word newsletter with blacksmith metaphor. Includes CTA for beta testers."
+    },
+    {
+      "id": "social-pack-001",
+      "type": "content",
+      "title": "Social Media Pack (3 posts)",
+      "agent": "Scribe",
+      "createdAt": "2026-03-18T07:35:00Z",
+      "cost": 0,
+      "description": "3 posts for X/LinkedIn: The Paradox, The Test, The Process"
+    }
+  ],
+  "finances": {
+    "monthlyBudget": 200,
+    "spentThisMonth": 0.85,
+    "projectedBurn": 75,
+    "remaining": 199.15,
+    "lastAudit": "2026-03-18T00:00:00Z"
+  },
+  "projects": [
+    {
+      "name": "Checkmate Champions",
+      "status": "complete",
+      "progress": 100,
+      "lastUpdate": "2026-03-13T00:00:00Z"
+    },
+    {
+      "name": "The Forge Fitness",
+      "status": "active",
+      "progress": 40,
+      "lastUpdate": "2026-03-18T07:35:00Z"
+    },
+    {
+      "name": "Content Pipeline",
+      "status": "active",
+      "progress": 60,
+      "lastUpdate": "2026-03-18T07:35:00Z"
+    }
+  ],
+  "recentActivity": [
+    {
+      "agent": "Atlas",
+      "action": "Completed morning research",
+      "time": "2026-03-18T06:00:00Z",
+      "link": "reports/atlas-morning-2026-03-18.md"
+    },
+    {
+      "agent": "Scribe",
+      "action": "Created newsletter draft",
+      "time": "2026-03-18T07:30:00Z",
+      "link": "content/pending-approval/newsletter.md"
+    },
+    {
+      "agent": "Scribe",
+      "action": "Created social media pack",
+      "time": "2026-03-18T07:35:00Z",
+      "link": "content/pending-approval/social-pack.md"
+    }
+  ]
+}
