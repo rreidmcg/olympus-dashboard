@@ -447,12 +447,26 @@
             </div>
         </div>
         
-        <!-- Center: Approvals & Activity -->
+        <!-- Center: Content Pipeline & Activity -->
         <div>
             <div class="panel" style="margin-bottom: 20px;">
-                <h2>⏳ Pending Approvals</h2>
-                <div id="approvals-list">
+                <h2>⏳ Pending Approval</h2>
+                <div id="pending-list">
                     <div class="empty-state">Loading...</div>
+                </div>
+            </div>
+            
+            <div class="panel" style="margin-bottom: 20px;">
+                <h2>✅ Approved (Ready to Publish)</h2>
+                <div id="approved-list">
+                    <div class="empty-state">No approved content</div>
+                </div>
+            </div>
+            
+            <div class="panel" style="margin-bottom: 20px;">
+                <h2>📢 Published</h2>
+                <div id="published-list">
+                    <div class="empty-state">No published content</div>
                 </div>
             </div>
             
@@ -567,7 +581,7 @@
                         ${contentDisplay}
                     </div>
                     <div class="modal-actions">
-                        <button class="btn-approve" onclick="approveItem('${item.id}')">✅ Approve & Publish</button>
+                        <button class="btn-approve" onclick="approveItem('${item.id}')">✅ Approve & Move to Queue</button>
                         <button class="btn-edit" onclick="editItem('${item.id}')">✏️ Request Changes</button>
                         <button class="btn-deny" onclick="denyItem('${item.id}')">❌ Deny</button>
                     </div>
@@ -627,13 +641,21 @@
         
         function denyItem(id) {
             const reason = prompt('Reason for denial?');
-            alert(`Denied: ${id}\n\nReason: ${reason || 'No reason provided'}\n\nAgent has been notified.`);
+            alert(`Denied: ${id}\n\nReason: ${reason || 'No reason provided'}\n\nContent removed from pipeline.`);
             closeModal();
         }
         
-        function renderApprovals(approvals) {
-            const container = document.getElementById('approvals-list');
-            if (!approvals || approvals.length === 0) {
+        // Pipeline data storage (in-memory for now, could be persisted)
+        let pipelineData = {
+            pending: [],
+            approved: [],
+            published: []
+        };
+        
+        function renderPending(items) {
+            pipelineData.pending = items || [];
+            const container = document.getElementById('pending-list');
+            if (!items || items.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
                         <p>🎉 All caught up!</p>
@@ -643,7 +665,7 @@
                 return;
             }
             
-            container.innerHTML = approvals.map(item => {
+            container.innerHTML = items.map(item => {
                 const isFinancial = item.cost > 0;
                 const costDisplay = item.cost > 0 ? `<span class="approval-cost">$${item.cost}</span>` : '';
                 
@@ -655,6 +677,191 @@
                     </div>
                 `;
             }).join('');
+        }
+        
+        function renderApproved(items) {
+            pipelineData.approved = items || [];
+            const container = document.getElementById('approved-list');
+            if (!items || items.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>📋 No approved content</p>
+                        <p style="font-size: 13px; margin-top: 10px;">Approved items appear here, ready to publish.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = items.map(item => {
+                const costDisplay = item.cost > 0 ? `<span class="approval-cost">$${item.cost}</span>` : '';
+                const approvedAt = item.approvedAt ? timeAgo(item.approvedAt) : 'Recently';
+                
+                return `
+                    <div class="approval-item" style="border-left-color: var(--green);" onclick='showApprovedModal(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+                        <div class="approval-title">${item.title} ${costDisplay}</div>
+                        <div class="approval-desc">${item.description}</div>
+                        <div class="approval-meta">Approved ${approvedAt} • Click to publish</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function renderPublished(items) {
+            pipelineData.published = items || [];
+            const container = document.getElementById('published-list');
+            if (!items || items.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>📢 No published content yet</p>
+                        <p style="font-size: 13px; margin-top: 10px;">Published items with timestamps appear here.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = items.map(item => {
+                const publishedDate = new Date(item.publishedAt).toLocaleDateString();
+                const platforms = item.platforms ? item.platforms.join(', ') : 'Manual';
+                
+                return `
+                    <div class="approval-item" style="border-left-color: var(--cyan); opacity: 0.8;" onclick='showPublishedModal(${JSON.stringify(item).replace(/'/g, "&#39;")})'>
+                        <div class="approval-title">${item.title}</div>
+                        <div class="approval-desc">Published on ${platforms}</div>
+                        <div class="approval-meta">${publishedDate} • Archived for re-use</div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        function showApprovedModal(item) {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            const contentDisplay = item.content ? 
+                `<div class="content-preview">
+                    <h4>📄 Content</h4>
+                    <pre class="content-text">${escapeHtml(item.content)}</pre>
+                </div>` : '';
+            modal.innerHTML = `
+                <div class="modal-content approval-modal">
+                    <div class="modal-header">
+                        <h3>${item.title}</h3>
+                        <p class="modal-meta">Approved • Ready to publish</p>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description">${item.description}</p>
+                        ${contentDisplay}
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-approve" onclick="publishItem('${item.id}')">📢 Mark as Published</button>
+                        <button class="btn-edit" onclick="scheduleItem('${item.id}')">📅 Schedule for Later</button>
+                    </div>
+                    <button class="btn-close" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        function showPublishedModal(item) {
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            const contentDisplay = item.content ? 
+                `<div class="content-preview">
+                    <h4>📄 Archived Content</h4>
+                    <pre class="content-text">${escapeHtml(item.content)}</pre>
+                </div>` : '';
+            const publishedDate = new Date(item.publishedAt).toLocaleString();
+            const platforms = item.platforms ? item.platforms.join(', ') : 'Manual publish';
+            
+            modal.innerHTML = `
+                <div class="modal-content approval-modal">
+                    <div class="modal-header">
+                        <h3>${item.title}</h3>
+                        <p class="modal-meta">Published: ${publishedDate} • ${platforms}</p>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description">${item.description}</p>
+                        ${contentDisplay}
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-approve" onclick="copyContent('${item.id}')">📋 Copy for Re-use</button>
+                    </div>
+                    <button class="btn-close" onclick="closeModal()">Close</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        function approveItem(id) {
+            // Find item in pending
+            const itemIndex = pipelineData.pending.findIndex(i => i.id === id);
+            if (itemIndex >= 0) {
+                const item = pipelineData.pending[itemIndex];
+                item.approvedAt = new Date().toISOString();
+                
+                // Move to approved
+                pipelineData.approved.push(item);
+                pipelineData.pending.splice(itemIndex, 1);
+                
+                // Re-render
+                renderPending(pipelineData.pending);
+                renderApproved(pipelineData.approved);
+                
+                alert(`✅ Approved: ${item.title}\n\nMoved to "Approved (Ready to Publish)" section.\n\nClick it there when you're ready to publish.`);
+            }
+            closeModal();
+        }
+        
+        function publishItem(id) {
+            const itemIndex = pipelineData.approved.findIndex(i => i.id === id);
+            if (itemIndex >= 0) {
+                const item = pipelineData.approved[itemIndex];
+                
+                // Ask for platforms
+                const platforms = prompt('Where did you publish this? (e.g., X, LinkedIn, Newsletter)\nSeparate with commas:', 'X, LinkedIn');
+                
+                item.publishedAt = new Date().toISOString();
+                item.platforms = platforms ? platforms.split(',').map(p => p.trim()) : ['Manual'];
+                
+                // Move to published
+                pipelineData.published.unshift(item);
+                pipelineData.approved.splice(itemIndex, 1);
+                
+                // Re-render
+                renderApproved(pipelineData.approved);
+                renderPublished(pipelineData.published);
+                
+                alert(`📢 Published: ${item.title}\n\nPlatforms: ${item.platforms.join(', ')}\n\nArchived with timestamp for future re-use.`);
+            }
+            closeModal();
+        }
+        
+        function scheduleItem(id) {
+            const item = pipelineData.approved.find(i => i.id === id);
+            if (item) {
+                const when = prompt('When should this be published?\n(e.g., "2026-03-20 08:00" or "Tomorrow 6am"):', 'Tomorrow 6am');
+                if (when) {
+                    item.scheduledFor = when;
+                    alert(`📅 Scheduled: ${item.title}\n\nFor: ${when}\n\nHermes will remind you.`);
+                }
+            }
+            closeModal();
+        }
+        
+        function copyContent(id) {
+            const item = pipelineData.published.find(i => i.id === id);
+            if (item && item.content) {
+                navigator.clipboard.writeText(item.content).then(() => {
+                    alert(`📋 Copied to clipboard!\n\nYou can now paste this to re-use the content.`);
+                }).catch(() => {
+                    alert(`Could not auto-copy. Content is in the modal for manual copying.`);
+                });
+            }
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
         
         function renderProjects(projects) {
@@ -715,7 +922,18 @@
                 if (JSON.stringify(data) !== JSON.stringify(lastData)) {
                     lastData = data;
                     renderAgents(data.agents);
-                    renderApprovals(data.approvals);
+                    
+                    // Handle new contentPipeline structure or old approvals structure
+                    if (data.contentPipeline) {
+                        renderPending(data.contentPipeline.pendingApproval);
+                        renderApproved(data.contentPipeline.approved);
+                        renderPublished(data.contentPipeline.published);
+                    } else if (data.approvals) {
+                        renderPending(data.approvals);
+                        renderApproved([]);
+                        renderPublished([]);
+                    }
+                    
                     renderFinances(data.finances);
                     renderProjects(data.projects);
                     renderActivity(data.recentActivity);
