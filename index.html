@@ -485,7 +485,7 @@
                 <div id="finances">
                     <div class="metric">
                         <span>Monthly Budget</span>
-                        <span class="metric-value">$200</span>
+                        <span class="metric-value" id="budget">$60</span>
                     </div>
                     <div class="metric">
                         <span>Spent This Month</span>
@@ -916,6 +916,30 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+        
+        function renderFinances(finances) {
+            if (!finances) return;
+            
+            const budgetEl = document.getElementById('budget');
+            const spentEl = document.getElementById('spent');
+            const remainingEl = document.getElementById('remaining');
+            const burnEl = document.getElementById('burn');
+            
+            if (budgetEl) budgetEl.textContent = `$${finances.monthlyBudget}`;
+            if (spentEl) spentEl.textContent = `$${finances.spentThisMonth?.toFixed(2) || '0.00'}`;
+            if (remainingEl) {
+                remainingEl.textContent = `$${finances.remaining?.toFixed(2) || '0.00'}`;
+                // Update color based on remaining amount
+                if (finances.remaining < 10) {
+                    remainingEl.className = 'metric-value danger';
+                } else if (finances.remaining < 30) {
+                    remainingEl.className = 'metric-value warning';
+                } else {
+                    remainingEl.className = 'metric-value good';
+                }
+            }
+            if (burnEl) burnEl.textContent = `~$${finances.projectedBurn}/mo`;
         }
         
         function renderProjects(projects) {
