@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T06:00:00Z",
+  "lastUpdated": "2026-03-18T16:35:00Z",
   "agents": [
     {
       "name": "Zeus",
@@ -72,11 +72,11 @@
     }
   ],
   "finances": {
-    "monthlyBudget": 200,
+    "monthlyBudget": 60,
     "spentThisMonth": 0.85,
-    "projectedBurn": 75,
-    "remaining": 199.15,
-    "lastAudit": "2026-03-18T00:00:00Z"
+    "projectedBurn": 60,
+    "remaining": 59.15,
+    "lastAudit": "2026-03-18T16:35:00Z"
   },
   "projects": [
     {
