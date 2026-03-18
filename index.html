@@ -683,16 +683,14 @@
         
         // Merge server data with local pipeline
         function mergePipelineWithServer(serverPending) {
-            // Update server ID tracking
+            // Get IDs from server pending list
             serverPendingIds = new Set((serverPending || []).map(i => i.id));
             
-            // Filter local approved/published to remove items that are back in pending (edge case)
-            pipelineData.approved = pipelineData.approved.filter(i => !serverPendingIds.has(i.id));
-            
-            // Pending = server pending minus anything we've already approved locally
+            // Get IDs from our local approved/published lists
             const localApprovedIds = new Set(pipelineData.approved.map(i => i.id));
             const localPublishedIds = new Set(pipelineData.published.map(i => i.id));
             
+            // Pending = server pending minus anything we've already approved/published locally
             pipelineData.pending = (serverPending || []).filter(i => {
                 return !localApprovedIds.has(i.id) && !localPublishedIds.has(i.id);
             });
