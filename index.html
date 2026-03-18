@@ -167,53 +167,84 @@
             border-top: 1px solid var(--border);
         }
         
-        /* Responsive Breakpoints */
-        @media (max-width: 1200px) {
+        /* Responsive Breakpoints - WIDER BREAKPOINTS */
+        
+        /* XL Desktop: 3 columns */
+        @media (min-width: 1400px) {
             .container { 
-                grid-template-columns: 280px 1fr; 
+                grid-template-columns: 300px 1fr 350px; 
             }
+        }
+        
+        /* Desktop/Large Tablet: 3 columns smaller */
+        @media (min-width: 1100px) and (max-width: 1399px) {
+            .container { 
+                grid-template-columns: 260px 1fr 300px; 
+                padding: 15px;
+                gap: 15px;
+            }
+        }
+        
+        /* Tablet: 2 columns (Agents | Content+Metrics) */
+        @media (min-width: 768px) and (max-width: 1099px) {
+            .container { 
+                grid-template-columns: 240px 1fr; 
+                padding: 15px;
+                gap: 15px;
+            }
+            /* Right column (metrics) goes below and becomes 2 columns */
             .container > div:last-child {
                 grid-column: 1 / -1;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 20px;
+                gap: 15px;
             }
             .container > div:last-child .panel {
                 margin-bottom: 0;
             }
         }
         
-        @media (max-width: 900px) {
+        /* Small Tablet: 2 columns but stacked differently */
+        @media (min-width: 600px) and (max-width: 767px) {
+            .container { 
+                grid-template-columns: 200px 1fr; 
+                padding: 12px;
+                gap: 12px;
+            }
+            .container > div:last-child {
+                grid-column: 1 / -1;
+                display: block;
+            }
+            .container > div:last-child .panel {
+                margin-bottom: 12px;
+            }
+            .panel {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .agent-name {
+                font-size: 13px;
+            }
+            .agent-role, .agent-next {
+                font-size: 10px;
+            }
+        }
+        
+        /* Mobile: 1 column */
+        @media (max-width: 599px) {
             .container { 
                 grid-template-columns: 1fr;
-                padding: 15px;
-                gap: 15px;
+                padding: 10px;
+                gap: 10px;
             }
             .container > div:last-child {
                 grid-column: auto;
                 display: block;
             }
             .container > div:last-child .panel {
-                margin-bottom: 15px;
-            }
-            .panel {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 22px;
-            }
-            .header {
-                padding: 15px;
-            }
-            .refresh-indicator span {
-                display: none;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
-                gap: 10px;
+                margin-bottom: 10px;
             }
             .panel {
                 padding: 12px;
@@ -239,9 +270,11 @@
                 flex-direction: column;
                 gap: 10px;
                 align-items: flex-start;
+                padding: 15px;
             }
             .refresh-indicator span {
                 display: inline;
+                font-size: 12px;
             }
         }
     </style>
