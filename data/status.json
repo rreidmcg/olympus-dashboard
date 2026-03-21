@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T01:35:00Z",
+  "lastUpdated": "2026-03-21T14:30:00Z",
   "agents": [
     {
       "name": "Zeus",
@@ -11,16 +11,16 @@
     {
       "name": "Atlas",
       "role": "Research",
-      "status": "idle",
+      "status": "completed",
       "currentTask": "Completed morning research",
-      "nextRun": "2026-03-21T06:00:00Z"
+      "nextRun": "2026-03-22T06:00:00Z"
     },
     {
       "name": "Scribe",
       "role": "Content",
-      "status": "idle",
+      "status": "completed",
       "currentTask": "Drafts ready for approval",
-      "nextRun": "2026-03-21T07:30:00Z"
+      "nextRun": "2026-03-22T07:30:00Z"
     },
     {
       "name": "Hephaestus",
@@ -53,6 +53,26 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "newsletter-march-hybrid-ai",
+        "type": "content",
+        "title": "Newsletter Issue #2: The AI Hammer Strikes",
+        "agent": "Scribe",
+        "createdAt": "2026-03-21T14:30:00Z",
+        "cost": 0,
+        "description": "500-word newsletter covering hybrid training dominance, AI leverage for trainers, and community as retention moat",
+        "content": "THE FORGE FITNESS NEWSLETTER | Issue #2 | Subject: The AI Hammer Strikes | Topics: 45% online market share, AI reducing admin by 80%, community 3x retention | Files: newsletter-march-hybrid-ai.md, social-posts-march-hybrid-ai.md"
+      },
+      {
+        "id": "social-posts-march-hybrid-ai",
+        "type": "content",
+        "title": "Social Media Pack - March 21 (3 posts)",
+        "agent": "Scribe",
+        "createdAt": "2026-03-21T14:30:00Z",
+        "cost": 0,
+        "description": "3 posts for X/LinkedIn: The Hybrid Reality, The AI Arbitrage, The Community Moat",
+        "content": "Social pack covering: 45% online coaching stats, AI trainer advantage, community retention multiplier"
+      },
       {
         "id": "newsletter-issue-01",
         "type": "content",
@@ -95,21 +115,33 @@
       "name": "The Forge Fitness",
       "status": "active",
       "progress": 45,
-      "lastUpdate": "2026-03-20T01:35:00Z"
+      "lastUpdate": "2026-03-21T14:30:00Z"
     },
     {
       "name": "Content Pipeline",
       "status": "active",
       "progress": 65,
-      "lastUpdate": "2026-03-20T01:35:00Z"
+      "lastUpdate": "2026-03-21T14:30:00Z"
     }
   ],
   "recentActivity": [
     {
+      "agent": "Scribe",
+      "action": "Created newsletter Issue #2: The AI Hammer Strikes",
+      "time": "2026-03-21T14:30:00Z",
+      "link": "content/pending-approval/newsletter-march-hybrid-ai.md"
+    },
+    {
+      "agent": "Scribe",
+      "action": "Created social media pack (3 posts): Hybrid AI Edition",
+      "time": "2026-03-21T14:30:00Z",
+      "link": "content/pending-approval/social-posts-march-hybrid-ai.md"
+    },
+    {
       "agent": "Atlas",
       "action": "Completed morning research",
-      "time": "2026-03-20T06:00:00Z",
-      "link": "reports/atlas-morning-2026-03-20.md"
+      "time": "2026-03-21T06:00:00Z",
+      "link": "reports/atlas-morning-2026-03-21.md"
     },
     {
       "agent": "Scribe",
@@ -122,6 +154,12 @@
       "action": "Created social media pack (3 posts)",
       "time": "2026-03-20T07:35:00Z",
       "link": "content/pending-approval/social-posts-march-2026.md"
+    },
+    {
+      "agent": "Atlas",
+      "action": "Completed morning research",
+      "time": "2026-03-20T06:00:00Z",
+      "link": "reports/atlas-morning-2026-03-20.md"
     },
     {
       "agent": "Atlas",
