@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-22T14:32:00Z",
+  "lastUpdated": "2026-03-23T14:30:00Z",
   "agents": [
     {
       "name": "Zeus",
@@ -13,7 +13,7 @@
       "role": "Research",
       "status": "completed",
       "currentTask": "Completed morning research",
-      "nextRun": "2026-03-23T06:00:00Z"
+      "nextRun": "2026-03-24T06:00:00Z"
     },
     {
       "name": "Scribe",
@@ -46,13 +46,33 @@
     {
       "name": "Athena",
       "role": "Strategy",
-      "status": "idle",
-      "currentTask": "Weekly review pending",
-      "nextRun": "2026-03-24T06:00:00Z"
+      "status": "completed",
+      "currentTask": "Weekly strategic review complete",
+      "nextRun": "2026-03-31T06:00:00Z"
     }
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "newsletter-march-23-vulnerability-ignition",
+        "type": "content",
+        "title": "Newsletter Issue #4: The Fire Doesn't Lie",
+        "agent": "Scribe",
+        "createdAt": "2026-03-23T14:30:00Z",
+        "cost": 0,
+        "description": "500-word newsletter on vulnerability hooks, 7-Day Ignition teaser, and the before-before transformation angle",
+        "content": "THE FORGE FITNESS NEWSLETTER | Issue #4 | Subject: The Fire Doesn't Lie — And Neither Should You | Topics: Vulnerability Hook strategy, 7-Day Ignition micro-program, Before-Before storytelling | Files: newsletter-march-23-vulnerability-ignition.md, social-posts-march-23-vulnerability-ignition.md"
+      },
+      {
+        "id": "social-posts-march-23-vulnerability-ignition",
+        "type": "content",
+        "title": "Social Media Pack - March 23 (3 posts)",
+        "agent": "Scribe",
+        "createdAt": "2026-03-23T14:30:00Z",
+        "cost": 0,
+        "description": "3 posts for X/LinkedIn: The Vulnerability Hook, The 7-Day Ignition, The Before-Before",
+        "content": "Social pack covering: Radical transparency strategy, Micro-workout teaser program, Transformation storytelling with emotional stakes"
+      },
       {
         "id": "newsletter-march-22-tools-changed",
         "type": "content",
@@ -134,17 +154,29 @@
     {
       "name": "The Forge Fitness",
       "status": "active",
-      "progress": 50,
-      "lastUpdate": "2026-03-22T14:32:00Z"
+      "progress": 52,
+      "lastUpdate": "2026-03-23T14:30:00Z"
     },
     {
       "name": "Content Pipeline",
       "status": "active",
-      "progress": 75,
-      "lastUpdate": "2026-03-22T14:32:00Z"
+      "progress": 78,
+      "lastUpdate": "2026-03-23T14:30:00Z"
     }
   ],
   "recentActivity": [
+    {
+      "agent": "Scribe",
+      "action": "Created newsletter Issue #4: The Fire Doesn't Lie",
+      "time": "2026-03-23T14:30:00Z",
+      "link": "content/pending-approval/newsletter-march-23-vulnerability-ignition.md"
+    },
+    {
+      "agent": "Scribe",
+      "action": "Created social media pack (3 posts): Vulnerability & Ignition Edition",
+      "time": "2026-03-23T14:30:00Z",
+      "link": "content/pending-approval/social-posts-march-23-vulnerability-ignition.md"
+    },
     {
       "agent": "Scribe",
       "action": "Created newsletter Issue #3: The Tools Have Changed",
