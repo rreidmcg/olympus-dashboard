@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-23T14:30:00Z",
+  "lastUpdated": "2026-03-24T14:30:00Z",
   "agents": [
     {
       "name": "Zeus",
@@ -53,6 +53,26 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "newsletter-march-24-linkedin-algorithm",
+        "type": "content",
+        "title": "Newsletter Issue #5: LinkedIn Algorithm Shift",
+        "agent": "Scribe",
+        "createdAt": "2026-03-24T14:30:00Z",
+        "cost": 0,
+        "description": "500-word newsletter on LinkedIn's 50% reach reduction, authentic video strategy, and long-form publishing tactics",
+        "content": "THE FORGE DISPATCH | March 24, 2026 | Subject: The Fire Doesn't Care About Your Follower Count | Topics: LinkedIn algorithm shifts favoring 1st-degree connections, messy authentic video over polished ads, bi-weekly publishing strategy | Files: newsletter-march-24-linkedin-algorithm.md, social-posts-march-24-linkedin-strategy.md"
+      },
+      {
+        "id": "social-posts-march-24-linkedin-strategy",
+        "type": "content",
+        "title": "Social Media Pack - March 24 (3 posts)",
+        "agent": "Scribe",
+        "createdAt": "2026-03-24T14:30:00Z",
+        "cost": 0,
+        "description": "3 posts for X/LinkedIn: Algorithm contrarian take, authentic video script, LinkedIn Publishing strategy",
+        "content": "Social pack covering: Why 50% reach reduction is good news, behind-the-scenes video script with CTA, bi-weekly LinkedIn article strategy for fitness coaches"
+      },
       {
         "id": "newsletter-march-23-vulnerability-ignition",
         "type": "content",
@@ -121,7 +141,7 @@
         "createdAt": "2026-03-20T01:34:00Z",
         "cost": 0,
         "description": "500-word newsletter with hybrid training, community retention, and longevity focus",
-        "content": "THE FORGE FITNESS NEWSLETTER\\n\\nIssue #1 | March 2026\\nSubject: The Fire Doesn't Care About Your Feelings\\n\\nBrother,\\n\\nThere's a difference between someone who *wants* to be strong and someone who's willing to do what it takes to get there. The forge doesn't discriminate. It doesn't care about your feelings. It cares about one thing: work."
+        "content": "THE FORGE FITNESS NEWSLETTER\n\nIssue #1 | March 2026\nSubject: The Fire Doesn't Care About Your Feelings\n\nBrother,\n\nThere's a difference between someone who *wants* to be strong and someone who's willing to do what it takes to get there. The forge doesn't discriminate. It doesn't care about your feelings. It cares about one thing: work."
       },
       {
         "id": "social-posts-march-2026",
@@ -155,16 +175,28 @@
       "name": "The Forge Fitness",
       "status": "active",
       "progress": 52,
-      "lastUpdate": "2026-03-23T14:30:00Z"
+      "lastUpdate": "2026-03-24T14:30:00Z"
     },
     {
       "name": "Content Pipeline",
       "status": "active",
       "progress": 78,
-      "lastUpdate": "2026-03-23T14:30:00Z"
+      "lastUpdate": "2026-03-24T14:30:00Z"
     }
   ],
   "recentActivity": [
+    {
+      "agent": "Scribe",
+      "action": "Created newsletter Issue #5: LinkedIn Algorithm Shift",
+      "time": "2026-03-24T14:30:00Z",
+      "link": "content/pending-approval/newsletter-march-24-linkedin-algorithm.md"
+    },
+    {
+      "agent": "Scribe",
+      "action": "Created social media pack (3 posts): LinkedIn Strategy Edition",
+      "time": "2026-03-24T14:30:00Z",
+      "link": "content/pending-approval/social-posts-march-24-linkedin-strategy.md"
+    },
     {
       "agent": "Scribe",
       "action": "Created newsletter Issue #4: The Fire Doesn't Lie",
@@ -212,12 +244,6 @@
       "action": "Created newsletter Issue #1",
       "time": "2026-03-20T07:30:00Z",
       "link": "content/pending-approval/newsletter-issue-01.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created social media pack (3 posts)",
-      "time": "2026-03-20T07:35:00Z",
-      "link": "content/pending-approval/social-posts-march-2026.md"
     }
   ]
 }
