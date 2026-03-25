@@ -570,6 +570,16 @@
                     <h4>📄 Content Preview</h4>
                     <pre class="content-text">${escapeHtml(item.content)}</pre>
                 </div>` : '';
+            // Build link to full content file
+            const filename = item.id.includes('newsletter') ? item.id + '.md' : 
+                            item.id.includes('social') ? item.id + '.md' : 
+                            item.link ? item.link.split('/').pop() : null;
+            const fullContentLink = filename ? 
+                `<a href="https://raw.githubusercontent.com/rreidmcg/olympus-dashboard/main/content/pending-approval/${filename}" 
+                    target="_blank" 
+                    style="display: inline-block; margin-bottom: 15px; color: var(--cyan); text-decoration: underline;">
+                    🔗 View Full Content in New Tab
+                </a>` : '';
             modal.innerHTML = `
                 <div class="modal-content approval-modal">
                     <div class="modal-header">
@@ -577,6 +587,7 @@
                         <p class="modal-meta">By ${item.agent} • ${timeAgo(item.createdAt)}${item.cost > 0 ? ` • $${item.cost}` : ''}</p>
                     </div>
                     <div class="modal-body">
+                        ${fullContentLink}
                         <p class="description">${item.description}</p>
                         ${contentDisplay}
                     </div>
