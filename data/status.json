@@ -1,249 +1,90 @@
 {
-  "lastUpdated": "2026-03-24T14:30:00Z",
-  "agents": [
-    {
-      "name": "Zeus",
-      "role": "Chief of Staff",
+  "lastUpdated": "2026-04-01T11:17:00Z",
+  "agents": {
+    "Scribe": {
       "status": "online",
-      "currentTask": "Overseeing operations",
-      "nextRun": null
-    },
-    {
-      "name": "Atlas",
-      "role": "Research",
-      "status": "completed",
-      "currentTask": "Completed morning research",
-      "nextRun": "2026-03-24T06:00:00Z"
-    },
-    {
-      "name": "Scribe",
-      "role": "Content",
-      "status": "completed",
       "currentTask": "Drafts ready for approval",
-      "nextRun": "2026-03-24T07:30:00Z"
+      "lastActivity": "2026-04-01T11:17:00Z"
     },
-    {
-      "name": "Hephaestus",
-      "role": "Engineering",
+    "Atlas": {
+      "status": "online",
+      "currentTask": "Competitor pricing research complete",
+      "lastActivity": "2026-04-01T10:18:00Z"
+    },
+    "Athena": {
       "status": "idle",
-      "currentTask": "On demand",
-      "nextRun": null
+      "currentTask": "Awaiting Monday strategic review",
+      "lastActivity": "2026-03-23T13:00:00Z"
     },
-    {
-      "name": "Hermes",
-      "role": "Growth",
+    "Hera": {
       "status": "idle",
-      "currentTask": "Awaiting approval",
-      "nextRun": null
-    },
-    {
-      "name": "Hera",
-      "role": "Finance",
-      "status": "idle",
-      "currentTask": "Weekly audit pending",
-      "nextRun": "2026-03-22T20:00:00Z"
-    },
-    {
-      "name": "Athena",
-      "role": "Strategy",
-      "status": "completed",
-      "currentTask": "Weekly strategic review complete",
-      "nextRun": "2026-03-31T06:00:00Z"
+      "currentTask": "Weekly budget audit scheduled",
+      "lastActivity": "2026-03-24T07:42:00Z"
     }
-  ],
+  },
   "contentPipeline": {
     "pendingApproval": [
       {
-        "id": "newsletter-march-24-linkedin-algorithm",
-        "type": "content",
-        "title": "Newsletter Issue #5: LinkedIn Algorithm Shift",
-        "agent": "Scribe",
-        "createdAt": "2026-03-24T14:30:00Z",
-        "cost": 0,
-        "description": "500-word newsletter on LinkedIn's 50% reach reduction, authentic video strategy, and long-form publishing tactics",
-        "content": "THE FORGE DISPATCH | March 24, 2026 | Subject: The Fire Doesn't Care About Your Follower Count | Topics: LinkedIn algorithm shifts favoring 1st-degree connections, messy authentic video over polished ads, bi-weekly publishing strategy | Files: newsletter-march-24-linkedin-algorithm.md, social-posts-march-24-linkedin-strategy.md"
+        "id": "SCRIBE-2026-04-001",
+        "title": "Newsletter: April Market Intelligence",
+        "type": "newsletter",
+        "file": "newsletter-april-2026-market-intelligence.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-01T11:17:00Z",
+        "topics": ["$140 unlimited disruptor", "Trainerize platform economics", "$300-400 pricing gap"]
       },
       {
-        "id": "social-posts-march-24-linkedin-strategy",
-        "type": "content",
-        "title": "Social Media Pack - March 24 (3 posts)",
-        "agent": "Scribe",
-        "createdAt": "2026-03-24T14:30:00Z",
-        "cost": 0,
-        "description": "3 posts for X/LinkedIn: Algorithm contrarian take, authentic video script, LinkedIn Publishing strategy",
-        "content": "Social pack covering: Why 50% reach reduction is good news, behind-the-scenes video script with CTA, bi-weekly LinkedIn article strategy for fitness coaches"
-      },
-      {
-        "id": "newsletter-march-23-vulnerability-ignition",
-        "type": "content",
-        "title": "Newsletter Issue #4: The Fire Doesn't Lie",
-        "agent": "Scribe",
-        "createdAt": "2026-03-23T14:30:00Z",
-        "cost": 0,
-        "description": "500-word newsletter on vulnerability hooks, 7-Day Ignition teaser, and the before-before transformation angle",
-        "content": "THE FORGE FITNESS NEWSLETTER | Issue #4 | Subject: The Fire Doesn't Lie — And Neither Should You | Topics: Vulnerability Hook strategy, 7-Day Ignition micro-program, Before-Before storytelling | Files: newsletter-march-23-vulnerability-ignition.md, social-posts-march-23-vulnerability-ignition.md"
-      },
-      {
-        "id": "social-posts-march-23-vulnerability-ignition",
-        "type": "content",
-        "title": "Social Media Pack - March 23 (3 posts)",
-        "agent": "Scribe",
-        "createdAt": "2026-03-23T14:30:00Z",
-        "cost": 0,
-        "description": "3 posts for X/LinkedIn: The Vulnerability Hook, The 7-Day Ignition, The Before-Before",
-        "content": "Social pack covering: Radical transparency strategy, Micro-workout teaser program, Transformation storytelling with emotional stakes"
-      },
-      {
-        "id": "newsletter-march-22-tools-changed",
-        "type": "content",
-        "title": "Newsletter Issue #3: The Tools Have Changed. Have You?",
-        "agent": "Scribe",
-        "createdAt": "2026-03-22T14:32:00Z",
-        "cost": 0,
-        "description": "500-word newsletter on hybrid training dominance, AI leverage for lean operations, and community as retention moat",
-        "content": "THE FORGE FITNESS NEWSLETTER | Issue #3 | Subject: The Tools Have Changed. Have You? | Topics: 45% online market capture, AI 80% admin reduction, 3x community retention | Files: newsletter-march-22-tools-changed.md, social-posts-march-22-tools-changed.md"
-      },
-      {
-        "id": "social-posts-march-22-tools-changed",
-        "type": "content",
-        "title": "Social Media Pack - March 22 (3 posts)",
-        "agent": "Scribe",
-        "createdAt": "2026-03-22T14:32:00Z",
-        "cost": 0,
-        "description": "3 posts for X/LinkedIn: The Hybrid Reality, The AI Hammer, The Community Moat",
-        "content": "Social pack covering: 45% market shift, AI as great equalizer for small budgets, guild-style community building"
-      },
-      {
-        "id": "newsletter-march-hybrid-ai",
-        "type": "content",
-        "title": "Newsletter Issue #2: The AI Hammer Strikes",
-        "agent": "Scribe",
-        "createdAt": "2026-03-21T14:30:00Z",
-        "cost": 0,
-        "description": "500-word newsletter covering hybrid training dominance, AI leverage for trainers, and community as retention moat",
-        "content": "THE FORGE FITNESS NEWSLETTER | Issue #2 | Subject: The AI Hammer Strikes | Topics: 45% online market share, AI reducing admin by 80%, community 3x retention | Files: newsletter-march-hybrid-ai.md, social-posts-march-hybrid-ai.md"
-      },
-      {
-        "id": "social-posts-march-hybrid-ai",
-        "type": "content",
-        "title": "Social Media Pack - March 21 (3 posts)",
-        "agent": "Scribe",
-        "createdAt": "2026-03-21T14:30:00Z",
-        "cost": 0,
-        "description": "3 posts for X/LinkedIn: The Hybrid Reality, The AI Arbitrage, The Community Moat",
-        "content": "Social pack covering: 45% online coaching stats, AI trainer advantage, community retention multiplier"
-      },
-      {
-        "id": "newsletter-issue-01",
-        "type": "content",
-        "title": "Newsletter Issue #1: The Fire Doesn't Care About Your Feelings",
-        "agent": "Scribe",
-        "createdAt": "2026-03-20T01:34:00Z",
-        "cost": 0,
-        "description": "500-word newsletter with hybrid training, community retention, and longevity focus",
-        "content": "THE FORGE FITNESS NEWSLETTER\n\nIssue #1 | March 2026\nSubject: The Fire Doesn't Care About Your Feelings\n\nBrother,\n\nThere's a difference between someone who *wants* to be strong and someone who's willing to do what it takes to get there. The forge doesn't discriminate. It doesn't care about your feelings. It cares about one thing: work."
-      },
-      {
-        "id": "social-posts-march-2026",
-        "type": "content",
-        "title": "Social Media Pack - March 2026 (3 posts)",
-        "agent": "Scribe",
-        "createdAt": "2026-03-20T01:35:00Z",
-        "cost": 0,
-        "description": "3 posts for X/LinkedIn: Hybrid Reality, Community as Armor, Breaking the Cycle",
-        "content": "SOCIAL MEDIA POSTS - PENDING APPROVAL"
+        "id": "SCRIBE-2026-04-002",
+        "title": "Social Posts: Market Intelligence Pack",
+        "type": "social",
+        "file": "social-posts-april-2026-market-intelligence.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-01T11:17:00Z",
+        "platforms": ["X/Twitter", "LinkedIn"]
       }
     ],
     "approved": [],
     "published": []
   },
-  "finances": {
-    "monthlyBudget": 60,
-    "spentThisMonth": 0.85,
-    "projectedBurn": 60,
-    "remaining": 59.15,
-    "lastAudit": "2026-03-18T16:35:00Z"
-  },
-  "projects": [
-    {
-      "name": "Checkmate Champions",
-      "status": "complete",
-      "progress": 100,
-      "lastUpdate": "2026-03-13T00:00:00Z"
-    },
-    {
-      "name": "The Forge Fitness",
-      "status": "active",
-      "progress": 52,
-      "lastUpdate": "2026-03-24T14:30:00Z"
-    },
-    {
-      "name": "Content Pipeline",
-      "status": "active",
-      "progress": 78,
-      "lastUpdate": "2026-03-24T14:30:00Z"
-    }
-  ],
   "recentActivity": [
     {
+      "time": "2026-04-01T11:17:00Z",
       "agent": "Scribe",
-      "action": "Created newsletter Issue #5: LinkedIn Algorithm Shift",
-      "time": "2026-03-24T14:30:00Z",
-      "link": "content/pending-approval/newsletter-march-24-linkedin-algorithm.md"
+      "action": "Created newsletter + 3 social posts from Atlas research",
+      "details": "Market intelligence content based on competitor pricing analysis"
     },
     {
-      "agent": "Scribe",
-      "action": "Created social media pack (3 posts): LinkedIn Strategy Edition",
-      "time": "2026-03-24T14:30:00Z",
-      "link": "content/pending-approval/social-posts-march-24-linkedin-strategy.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created newsletter Issue #4: The Fire Doesn't Lie",
-      "time": "2026-03-23T14:30:00Z",
-      "link": "content/pending-approval/newsletter-march-23-vulnerability-ignition.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created social media pack (3 posts): Vulnerability & Ignition Edition",
-      "time": "2026-03-23T14:30:00Z",
-      "link": "content/pending-approval/social-posts-march-23-vulnerability-ignition.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created newsletter Issue #3: The Tools Have Changed",
-      "time": "2026-03-22T14:32:00Z",
-      "link": "content/pending-approval/newsletter-march-22-tools-changed.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created social media pack (3 posts): Tools Changed Edition",
-      "time": "2026-03-22T14:32:00Z",
-      "link": "content/pending-approval/social-posts-march-22-tools-changed.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created newsletter Issue #2: The AI Hammer Strikes",
-      "time": "2026-03-21T14:30:00Z",
-      "link": "content/pending-approval/newsletter-march-hybrid-ai.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created social media pack (3 posts): Hybrid AI Edition",
-      "time": "2026-03-21T14:30:00Z",
-      "link": "content/pending-approval/social-posts-march-hybrid-ai.md"
-    },
-    {
+      "time": "2026-04-01T10:18:00Z",
       "agent": "Atlas",
-      "action": "Completed morning research",
-      "time": "2026-03-21T06:00:00Z",
-      "link": "reports/atlas-morning-2026-03-21.md"
-    },
-    {
-      "agent": "Scribe",
-      "action": "Created newsletter Issue #1",
-      "time": "2026-03-20T07:30:00Z",
-      "link": "content/pending-approval/newsletter-issue-01.md"
+      "action": "Completed competitor pricing research",
+      "details": "Key findings: $140 unlimited model, Trainerize economics, $300-400 gap"
     }
-  ]
+  ],
+  "projects": {
+    "The Forge Fitness": {
+      "status": "active",
+      "progress": 45,
+      "lastUpdate": "2026-04-01T11:17:00Z",
+      "nextMilestone": "Content approval & publishing"
+    },
+    "Content Pipeline": {
+      "status": "active",
+      "progress": 60,
+      "lastUpdate": "2026-04-01T11:17:00Z",
+      "nextMilestone": "Reid approval on pending drafts"
+    },
+    "OLYMPUS Dashboard": {
+      "status": "live",
+      "progress": 85,
+      "lastUpdate": "2026-04-01T11:17:00Z",
+      "nextMilestone": "Automated agent scheduling"
+    }
+  },
+  "metrics": {
+    "budgetRemaining": 60.00,
+    "budgetTotal": 60.00,
+    "agentsActive": 2,
+    "contentPending": 2,
+    "lastAgentRun": "2026-04-01T11:17:00Z"
+  }
 }
