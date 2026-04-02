@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-04-01T11:17:00Z",
+  "lastUpdated": "2026-04-02T11:17:00Z",
   "agents": {
     "Scribe": {
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-01T11:17:00Z"
+      "lastActivity": "2026-04-02T11:17:00Z"
     },
     "Atlas": {
       "status": "online",
@@ -24,6 +24,24 @@
   },
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-003",
+        "title": "Newsletter: Pricing Intelligence Brief",
+        "type": "newsletter",
+        "file": "newsletter-april-pricing-intelligence.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-02T11:17:00Z",
+        "topics": ["$140 unlimited disruptor", "Trainerize platform economics", "$300-400 pricing gap"]
+      },
+      {
+        "id": "SCRIBE-2026-04-004",
+        "title": "Social Posts: Pricing Intelligence Pack",
+        "type": "social",
+        "file": "social-posts-april-pricing-intelligence.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-02T11:17:00Z",
+        "platforms": ["X/Twitter", "LinkedIn"]
+      },
       {
         "id": "SCRIBE-2026-04-001",
         "title": "Newsletter: April Market Intelligence",
@@ -48,6 +66,12 @@
   },
   "recentActivity": [
     {
+      "time": "2026-04-02T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts from Atlas research",
+      "details": "Pricing intelligence content based on competitor pricing analysis"
+    },
+    {
       "time": "2026-04-01T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
@@ -64,19 +88,19 @@
     "The Forge Fitness": {
       "status": "active",
       "progress": 45,
-      "lastUpdate": "2026-04-01T11:17:00Z",
+      "lastUpdate": "2026-04-02T11:17:00Z",
       "nextMilestone": "Content approval & publishing"
     },
     "Content Pipeline": {
       "status": "active",
       "progress": 60,
-      "lastUpdate": "2026-04-01T11:17:00Z",
+      "lastUpdate": "2026-04-02T11:17:00Z",
       "nextMilestone": "Reid approval on pending drafts"
     },
     "OLYMPUS Dashboard": {
       "status": "live",
       "progress": 85,
-      "lastUpdate": "2026-04-01T11:17:00Z",
+      "lastUpdate": "2026-04-02T11:17:00Z",
       "nextMilestone": "Automated agent scheduling"
     }
   },
@@ -84,7 +108,7 @@
     "budgetRemaining": 60.00,
     "budgetTotal": 60.00,
     "agentsActive": 2,
-    "contentPending": 2,
-    "lastAgentRun": "2026-04-01T11:17:00Z"
+    "contentPending": 4,
+    "lastAgentRun": "2026-04-02T11:17:00Z"
   }
 }
