@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-04-02T11:17:00Z",
+  "lastUpdated": "2026-04-03T11:17:00Z",
   "agents": {
     "Scribe": {
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-02T11:17:00Z"
+      "lastActivity": "2026-04-03T11:17:00Z"
     },
     "Atlas": {
       "status": "online",
@@ -24,6 +24,24 @@
   },
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-005",
+        "title": "Newsletter: The Fire That Binds (Hybrid & Community Focus)",
+        "type": "newsletter",
+        "file": "newsletter-april-03-hybrid-community-fire.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-03T11:17:00Z",
+        "topics": ["45% hybrid market share", "community retention +40% LTV", "AI personalization 2027"]
+      },
+      {
+        "id": "SCRIBE-2026-04-006",
+        "title": "Social Posts: Hybrid, Community & AI Pack",
+        "type": "social",
+        "file": "social-posts-april-03-hybrid-community-ai.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-03T11:17:00Z",
+        "platforms": ["X/Twitter", "LinkedIn"]
+      },
       {
         "id": "SCRIBE-2026-04-003",
         "title": "Newsletter: Pricing Intelligence Brief",
@@ -66,6 +84,12 @@
   },
   "recentActivity": [
     {
+      "time": "2026-04-03T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts from Atlas research",
+      "details": "Content on hybrid coaching, community retention (+40% LTV), and AI personalization trends"
+    },
+    {
       "time": "2026-04-02T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
@@ -88,19 +112,19 @@
     "The Forge Fitness": {
       "status": "active",
       "progress": 45,
-      "lastUpdate": "2026-04-02T11:17:00Z",
+      "lastUpdate": "2026-04-03T11:17:00Z",
       "nextMilestone": "Content approval & publishing"
     },
     "Content Pipeline": {
       "status": "active",
       "progress": 60,
-      "lastUpdate": "2026-04-02T11:17:00Z",
+      "lastUpdate": "2026-04-03T11:17:00Z",
       "nextMilestone": "Reid approval on pending drafts"
     },
     "OLYMPUS Dashboard": {
       "status": "live",
       "progress": 85,
-      "lastUpdate": "2026-04-02T11:17:00Z",
+      "lastUpdate": "2026-04-03T11:17:00Z",
       "nextMilestone": "Automated agent scheduling"
     }
   },
@@ -108,7 +132,7 @@
     "budgetRemaining": 60.00,
     "budgetTotal": 60.00,
     "agentsActive": 2,
-    "contentPending": 4,
-    "lastAgentRun": "2026-04-02T11:17:00Z"
+    "contentPending": 6,
+    "lastAgentRun": "2026-04-03T11:17:00Z"
   }
 }
