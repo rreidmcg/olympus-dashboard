@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-04-04T11:17:00Z",
+  "lastUpdated": "2026-04-05T11:17:00Z",
   "agents": {
     "Scribe": {
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-04T11:17:00Z"
+      "lastActivity": "2026-04-05T11:17:00Z"
     },
     "Atlas": {
       "status": "online",
@@ -24,6 +24,24 @@
   },
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-009",
+        "title": "Newsletter: The Ritual Economy",
+        "type": "newsletter",
+        "file": "newsletter-april-05-ritual-economy.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-05T11:17:00Z",
+        "topics": ["ritual economy", "Ignition Sequence", "contrarian positioning", "family fitness"]
+      },
+      {
+        "id": "SCRIBE-2026-04-010",
+        "title": "Social Posts: Ritual Economy Pack",
+        "type": "social",
+        "file": "social-posts-april-05-ritual-economy.md",
+        "createdBy": "Scribe",
+        "createdAt": "2026-04-05T11:17:00Z",
+        "platforms": ["X/Twitter", "LinkedIn"]
+      },
       {
         "id": "SCRIBE-2026-04-007",
         "title": "Newsletter: The Anvil of Community",
@@ -102,6 +120,12 @@
   },
   "recentActivity": [
     {
+      "time": "2026-04-05T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts from Atlas research",
+      "details": "Content on ritual economy (Ashton Hall effect), contrarian positioning vs complexity theater, and family fitness/Hearth Protocol"
+    },
+    {
       "time": "2026-04-04T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
@@ -136,19 +160,19 @@
     "The Forge Fitness": {
       "status": "active",
       "progress": 45,
-      "lastUpdate": "2026-04-04T11:17:00Z",
+      "lastUpdate": "2026-04-05T11:17:00Z",
       "nextMilestone": "Content approval & publishing"
     },
     "Content Pipeline": {
       "status": "active",
-      "progress": 60,
-      "lastUpdate": "2026-04-04T11:17:00Z",
+      "progress": 65,
+      "lastUpdate": "2026-04-05T11:17:00Z",
       "nextMilestone": "Reid approval on pending drafts"
     },
     "OLYMPUS Dashboard": {
       "status": "live",
       "progress": 85,
-      "lastUpdate": "2026-04-04T11:17:00Z",
+      "lastUpdate": "2026-04-05T11:17:00Z",
       "nextMilestone": "Automated agent scheduling"
     }
   },
@@ -156,7 +180,7 @@
     "budgetRemaining": 60.00,
     "budgetTotal": 60.00,
     "agentsActive": 2,
-    "contentPending": 8,
-    "lastAgentRun": "2026-04-04T11:17:00Z"
+    "contentPending": 10,
+    "lastAgentRun": "2026-04-05T11:17:00Z"
   }
 }
