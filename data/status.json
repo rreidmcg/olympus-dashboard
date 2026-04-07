@@ -1,234 +1,230 @@
 {
   "lastUpdated": "2026-04-07T11:17:00Z",
-  "agents": {
-    "Scribe": {
+  "agents": [
+    {
+      "name": "Scribe",
+      "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
       "lastActivity": "2026-04-07T11:17:00Z"
     },
-    "Atlas": {
+    {
+      "name": "Atlas",
+      "role": "Market Intelligence",
       "status": "online",
       "currentTask": "Competitor pricing research complete",
-      "lastActivity": "2026-04-01T10:18:00Z"
+      "lastActivity": "2026-04-07T11:17:00Z"
     },
-    "Athena": {
+    {
+      "name": "Athena",
+      "role": "Strategic Planning",
       "status": "idle",
       "currentTask": "Awaiting Monday strategic review",
-      "lastActivity": "2026-03-23T13:00:00Z"
+      "lastActivity": "2026-04-06T13:00:00Z"
     },
-    "Hera": {
+    {
+      "name": "Hera",
+      "role": "Financial Oversight",
       "status": "idle",
       "currentTask": "Weekly budget audit scheduled",
-      "lastActivity": "2026-03-24T07:42:00Z"
+      "lastActivity": "2026-04-06T07:42:00Z"
+    },
+    {
+      "name": "Hephaestus",
+      "role": "Code Quality & Maintenance",
+      "status": "idle",
+      "currentTask": "First run scheduled 2:17 AM EST",
+      "lastActivity": "2026-04-05T12:00:00Z"
     }
-  },
+  ],
   "contentPipeline": {
     "pendingApproval": [
       {
         "id": "SCRIBE-2026-04-013",
         "title": "Newsletter: The Anvil Cools So the Steel Hardens",
         "type": "newsletter",
-        "file": "newsletter-april-07-recovery-pivot.md",
-        "createdBy": "Scribe",
+        "description": "Recovery-first programming pivot, health coaching credentials, professional supervision",
+        "agent": "Scribe",
         "createdAt": "2026-04-07T11:17:00Z",
-        "topics": ["recovery-first pivot", "health coaching credentials", "professional supervision", "LinkedIn content strategy"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-014",
         "title": "Social Posts: Recovery-First & Professional Depth Pack",
         "type": "social",
-        "file": "social-posts-april-07-recovery-pivot.md",
-        "createdBy": "Scribe",
+        "description": "3 posts for X/Twitter and LinkedIn on recovery, credentials, and supervision",
+        "agent": "Scribe",
         "createdAt": "2026-04-07T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-011",
         "title": "Newsletter: The Hammer Doesn't Apologize",
         "type": "newsletter",
-        "file": "newsletter-april-06-viral-truth.md",
-        "createdBy": "Scribe",
+        "description": "REHIT efficiency, 28-Day Forge challenge, Myth-Break Monday",
+        "agent": "Scribe",
         "createdAt": "2026-04-06T11:17:00Z",
-        "topics": ["REHIT efficiency", "28-Day Forge challenge", "Myth-Break Monday", "contrarian content"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-012",
         "title": "Social Posts: Viral Truth Pack",
         "type": "social",
-        "file": "social-posts-april-06-viral-truth.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on REHIT, 28-Day Forge challenge, contrarian content",
+        "agent": "Scribe",
         "createdAt": "2026-04-06T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-009",
         "title": "Newsletter: The Ritual Economy",
         "type": "newsletter",
-        "file": "newsletter-april-05-ritual-economy.md",
-        "createdBy": "Scribe",
+        "description": "Ritual economy, Ignition Sequence, family fitness Hearth Protocol",
+        "agent": "Scribe",
         "createdAt": "2026-04-05T11:17:00Z",
-        "topics": ["ritual economy", "Ignition Sequence", "contrarian positioning", "family fitness"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-010",
         "title": "Social Posts: Ritual Economy Pack",
         "type": "social",
-        "file": "social-posts-april-05-ritual-economy.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on ritual economy, contrarian positioning, family fitness",
+        "agent": "Scribe",
         "createdAt": "2026-04-05T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-007",
         "title": "Newsletter: The Anvil of Community",
         "type": "newsletter",
-        "file": "newsletter-april-04-community-anvil.md",
-        "createdBy": "Scribe",
+        "description": "Community retention (+40% LTV), hybrid training, AI trends",
+        "agent": "Scribe",
         "createdAt": "2026-04-04T11:17:00Z",
-        "topics": ["hybrid training default", "community +40% LTV", "AI personalization 2027"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-008",
         "title": "Social Posts: Community, AI & Hybrid Pack",
         "type": "social",
-        "file": "social-posts-april-04-community-ai-hybrid.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on community, AI personalization, hybrid training",
+        "agent": "Scribe",
         "createdAt": "2026-04-04T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-005",
-        "title": "Newsletter: The Fire That Binds (Hybrid & Community Focus)",
+        "title": "Newsletter: The Fire That Binds",
         "type": "newsletter",
-        "file": "newsletter-april-03-hybrid-community-fire.md",
-        "createdBy": "Scribe",
+        "description": "Hybrid coaching, community retention (+40% LTV), AI personalization",
+        "agent": "Scribe",
         "createdAt": "2026-04-03T11:17:00Z",
-        "topics": ["45% hybrid market share", "community retention +40% LTV", "AI personalization 2027"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-006",
         "title": "Social Posts: Hybrid, Community & AI Pack",
         "type": "social",
-        "file": "social-posts-april-03-hybrid-community-ai.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on hybrid coaching, community, AI trends",
+        "agent": "Scribe",
         "createdAt": "2026-04-03T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-003",
         "title": "Newsletter: Pricing Intelligence Brief",
         "type": "newsletter",
-        "file": "newsletter-april-pricing-intelligence.md",
-        "createdBy": "Scribe",
+        "description": "$140 unlimited disruptor, Trainerize economics, pricing gap analysis",
+        "agent": "Scribe",
         "createdAt": "2026-04-02T11:17:00Z",
-        "topics": ["$140 unlimited disruptor", "Trainerize platform economics", "$300-400 pricing gap"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-004",
         "title": "Social Posts: Pricing Intelligence Pack",
         "type": "social",
-        "file": "social-posts-april-pricing-intelligence.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on pricing intelligence and competitor analysis",
+        "agent": "Scribe",
         "createdAt": "2026-04-02T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-001",
         "title": "Newsletter: April Market Intelligence",
         "type": "newsletter",
-        "file": "newsletter-april-2026-market-intelligence.md",
-        "createdBy": "Scribe",
+        "description": "Market intelligence on competitor pricing and industry trends",
+        "agent": "Scribe",
         "createdAt": "2026-04-01T11:17:00Z",
-        "topics": ["$140 unlimited disruptor", "Trainerize platform economics", "$300-400 pricing gap"]
+        "cost": 0
       },
       {
         "id": "SCRIBE-2026-04-002",
         "title": "Social Posts: Market Intelligence Pack",
         "type": "social",
-        "file": "social-posts-april-2026-market-intelligence.md",
-        "createdBy": "Scribe",
+        "description": "3 posts on market intelligence and pricing trends",
+        "agent": "Scribe",
         "createdAt": "2026-04-01T11:17:00Z",
-        "platforms": ["X/Twitter", "LinkedIn"]
+        "cost": 0
       }
     ],
     "approved": [],
     "published": []
   },
+  "finances": {
+    "monthlyBudget": 60,
+    "spentThisMonth": 0,
+    "remaining": 60,
+    "projectedBurn": 60
+  },
+  "projects": [
+    {
+      "name": "The Forge Fitness",
+      "status": "active",
+      "progress": 45,
+      "lastUpdate": "2026-04-07T11:17:00Z"
+    },
+    {
+      "name": "Content Pipeline",
+      "status": "active",
+      "progress": 65,
+      "lastUpdate": "2026-04-07T11:17:00Z"
+    },
+    {
+      "name": "OLYMPUS Dashboard",
+      "status": "live",
+      "progress": 85,
+      "lastUpdate": "2026-04-07T11:17:00Z"
+    }
+  ],
   "recentActivity": [
     {
       "time": "2026-04-07T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on recovery-first programming pivot, health coaching credentials (insurance-reimbursable), and professional supervision/ethics as differentiators"
+      "details": "Content on recovery-first programming pivot, health coaching credentials, and professional supervision"
     },
     {
       "time": "2026-04-06T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on X/Twitter viral fitness trends: REHIT efficiency (19-min CEO), 28-Day Forge challenge launch, and Myth-Break Monday contrarian series"
+      "details": "Content on X/Twitter viral fitness trends: REHIT efficiency, 28-Day Forge challenge launch"
     },
     {
       "time": "2026-04-05T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on ritual economy (Ashton Hall effect), contrarian positioning vs complexity theater, and family fitness/Hearth Protocol"
+      "details": "Content on ritual economy, contrarian positioning, and family fitness"
     },
     {
       "time": "2026-04-04T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on community retention (+40% LTV), hybrid training dominance (45% market share), and AI personalization trends"
+      "details": "Content on community retention (+40% LTV), hybrid training, AI personalization"
     },
     {
       "time": "2026-04-03T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on hybrid coaching, community retention (+40% LTV), and AI personalization trends"
-    },
-    {
-      "time": "2026-04-02T11:17:00Z",
-      "agent": "Scribe",
-      "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Pricing intelligence content based on competitor pricing analysis"
-    },
-    {
-      "time": "2026-04-01T11:17:00Z",
-      "agent": "Scribe",
-      "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Market intelligence content based on competitor pricing analysis"
-    },
-    {
-      "time": "2026-04-01T10:18:00Z",
-      "agent": "Atlas",
-      "action": "Completed competitor pricing research",
-      "details": "Key findings: $140 unlimited model, Trainerize economics, $300-400 gap"
+      "details": "Content on hybrid coaching, community retention, and AI trends"
     }
-  ],
-  "projects": {
-    "The Forge Fitness": {
-      "status": "active",
-      "progress": 45,
-      "lastUpdate": "2026-04-07T11:17:00Z",
-      "nextMilestone": "Content approval & publishing"
-    },
-    "Content Pipeline": {
-      "status": "active",
-      "progress": 65,
-      "lastUpdate": "2026-04-07T11:17:00Z",
-      "nextMilestone": "Reid approval on pending drafts"
-    },
-    "OLYMPUS Dashboard": {
-      "status": "live",
-      "progress": 85,
-      "lastUpdate": "2026-04-07T11:17:00Z",
-      "nextMilestone": "Automated agent scheduling"
-    }
-  },
-  "metrics": {
-    "budgetRemaining": 60.00,
-    "budgetTotal": 60.00,
-    "agentsActive": 2,
-    "contentPending": 14,
-    "lastAgentRun": "2026-04-07T11:17:00Z"
-  }
+  ]
 }
