@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-07T11:17:00Z",
+  "lastUpdated": "2026-04-08T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-07T11:17:00Z"
+      "lastActivity": "2026-04-08T11:17:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-015",
+        "title": "Newsletter: The Tempering Phase",
+        "type": "newsletter",
+        "description": "REHIT efficiency, the ritual economy, Damascus Protocol preview, and fatherhood legacy themes",
+        "agent": "Scribe",
+        "createdAt": "2026-04-08T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-016",
+        "title": "Social Posts: The Tempering Phase Pack",
+        "type": "social",
+        "description": "3 posts on fitness app betrayal, REHIT science, and fatherhood legacy themes",
+        "agent": "Scribe",
+        "createdAt": "2026-04-08T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-013",
         "title": "Newsletter: The Anvil Cools So the Steel Hardens",
@@ -180,13 +198,13 @@
       "name": "The Forge Fitness",
       "status": "active",
       "progress": 45,
-      "lastUpdate": "2026-04-07T11:17:00Z"
+      "lastUpdate": "2026-04-08T11:17:00Z"
     },
     {
       "name": "Content Pipeline",
       "status": "active",
-      "progress": 65,
-      "lastUpdate": "2026-04-07T11:17:00Z"
+      "progress": 68,
+      "lastUpdate": "2026-04-08T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -196,6 +214,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-08T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content on REHIT efficiency, ritual economy, Damascus Protocol, and fatherhood legacy themes"
+    },
     {
       "time": "2026-04-07T11:17:00Z",
       "agent": "Scribe",
@@ -219,12 +243,6 @@
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
       "details": "Content on community retention (+40% LTV), hybrid training, AI personalization"
-    },
-    {
-      "time": "2026-04-03T11:17:00Z",
-      "agent": "Scribe",
-      "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on hybrid coaching, community retention, and AI trends"
     }
   ]
 }
