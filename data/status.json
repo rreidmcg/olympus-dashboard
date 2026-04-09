@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-04-08T11:17:00Z",
+  "lastUpdated": "2026-04-09T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-08T11:17:00Z"
+      "lastActivity": "2026-04-09T11:17:00Z"
     },
     {
       "name": "Atlas",
       "role": "Market Intelligence",
       "status": "online",
       "currentTask": "Competitor pricing research complete",
-      "lastActivity": "2026-04-07T11:17:00Z"
+      "lastActivity": "2026-04-08T11:17:00Z"
     },
     {
       "name": "Athena",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-017",
+        "title": "Newsletter: Know Your Steel's Worth",
+        "type": "newsletter",
+        "description": "Pricing intelligence from Atlas research—premium tier floor rise, platform cost squeeze, AI disruption, and action items for The Forge Fitness",
+        "agent": "Scribe",
+        "createdAt": "2026-04-09T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-018",
+        "title": "Social Posts: Pricing Intelligence Pack",
+        "type": "social",
+        "description": "3 posts on premium pricing confidence, AI commoditization threat, and platform cost strategy for X/LinkedIn",
+        "agent": "Scribe",
+        "createdAt": "2026-04-09T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-015",
         "title": "Newsletter: The Tempering Phase",
@@ -204,7 +222,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 68,
-      "lastUpdate": "2026-04-08T11:17:00Z"
+      "lastUpdate": "2026-04-09T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -214,6 +232,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-09T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content on pricing intelligence: premium tier floor rise, platform cost squeeze, AI commoditization threat from Atlas research"
+    },
     {
       "time": "2026-04-08T11:17:00Z",
       "agent": "Scribe",
