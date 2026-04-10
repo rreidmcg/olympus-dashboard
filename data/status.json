@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-09T11:17:00Z",
+  "lastUpdated": "2026-04-10T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-09T11:17:00Z"
+      "lastActivity": "2026-04-10T11:17:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-019",
+        "title": "Newsletter: The Anvil Knows Its Worth",
+        "type": "newsletter",
+        "description": "Premium pricing test proposal ($549-649 Master Smith tier), platform cost squeeze warning, AI disruption and outcome guarantees strategy",
+        "agent": "Scribe",
+        "createdAt": "2026-04-10T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-020",
+        "title": "Social Posts: Know Your Worth Pack",
+        "type": "social",
+        "description": "3 posts on premium pricing confidence, AI commoditization threat, and platform cost dependency risks for X/LinkedIn",
+        "agent": "Scribe",
+        "createdAt": "2026-04-10T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-017",
         "title": "Newsletter: Know Your Steel's Worth",
@@ -221,8 +239,8 @@
     {
       "name": "Content Pipeline",
       "status": "active",
-      "progress": 68,
-      "lastUpdate": "2026-04-09T11:17:00Z"
+      "progress": 72,
+      "lastUpdate": "2026-04-10T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -232,6 +250,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-10T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content on pricing confidence: Master Smith tier test to $549-649, platform cost squeeze warning, AI disruption and outcome guarantees strategy"
+    },
     {
       "time": "2026-04-09T11:17:00Z",
       "agent": "Scribe",
@@ -261,12 +285,6 @@
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts from Atlas research",
       "details": "Content on ritual economy, contrarian positioning, and family fitness"
-    },
-    {
-      "time": "2026-04-04T11:17:00Z",
-      "agent": "Scribe",
-      "action": "Created newsletter + 3 social posts from Atlas research",
-      "details": "Content on community retention (+40% LTV), hybrid training, AI personalization"
     }
   ]
 }
