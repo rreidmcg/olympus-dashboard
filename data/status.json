@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-10T11:17:00Z",
+  "lastUpdated": "2026-04-11T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-10T11:17:00Z"
+      "lastActivity": "2026-04-11T11:17:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-021",
+        "title": "Newsletter: The Fire Doesn't Care About Your Feelings",
+        "type": "newsletter",
+        "description": "Hybrid training as baseline (50% of trainers), retention economics, AI as force multiplier—market intel from Atlas",
+        "agent": "Scribe",
+        "createdAt": "2026-04-11T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-022",
+        "title": "Social Posts: Hybrid-Retention-AI Pack",
+        "type": "social",
+        "description": "3 posts on hybrid training shift, retention vs acquisition war, and AI as anvil—not replacement",
+        "agent": "Scribe",
+        "createdAt": "2026-04-11T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-019",
         "title": "Newsletter: The Anvil Knows Its Worth",
@@ -240,7 +258,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 72,
-      "lastUpdate": "2026-04-10T11:17:00Z"
+      "lastUpdate": "2026-04-11T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -250,6 +268,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-11T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content from Atlas 04-11 brief: hybrid training as baseline, retention economics (4/5 trainers struggling with acquisition), AI as force multiplier for coaches"
+    },
     {
       "time": "2026-04-10T11:17:00Z",
       "agent": "Scribe",
