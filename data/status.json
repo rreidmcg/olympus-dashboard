@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-11T11:17:00Z",
+  "lastUpdated": "2026-04-12T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-11T11:17:00Z"
+      "lastActivity": "2026-04-12T11:17:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-023",
+        "title": "Newsletter: The Forge Dispatch — Three Truths",
+        "type": "newsletter",
+        "description": "Three market truths from Atlas 04-12 brief: hybrid is non-negotiable (45% market share), retention beats acquisition (4/5 trainers stalled), AI is table stakes now",
+        "agent": "Scribe",
+        "createdAt": "2026-04-12T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-024",
+        "title": "Social Posts: Three Truths Pack",
+        "type": "social",
+        "description": "3 posts on digital forge as baseline, retention over acquisition math, and AI as table stakes—not future threat but present reality",
+        "agent": "Scribe",
+        "createdAt": "2026-04-12T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-021",
         "title": "Newsletter: The Fire Doesn't Care About Your Feelings",
@@ -257,8 +275,8 @@
     {
       "name": "Content Pipeline",
       "status": "active",
-      "progress": 72,
-      "lastUpdate": "2026-04-11T11:17:00Z"
+      "progress": 75,
+      "lastUpdate": "2026-04-12T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -268,6 +286,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-12T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content from Atlas 04-12 brief: hybrid as non-negotiable (45% market share), retention over acquisition (4/5 trainers stalled), AI as table stakes now"
+    },
     {
       "time": "2026-04-11T11:17:00Z",
       "agent": "Scribe",
