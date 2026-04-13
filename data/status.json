@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-12T11:17:00Z",
+  "lastUpdated": "2026-04-13T11:17:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-12T11:17:00Z"
+      "lastActivity": "2026-04-13T11:17:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-025",
+        "title": "Newsletter: The Steel Doesn't Lie",
+        "type": "newsletter",
+        "description": "Three truths from Atlas 04-13 brief: simplicity beats production value, personality sells over credentials, transformation time-lapses dominate with 4x save rate",
+        "agent": "Scribe",
+        "createdAt": "2026-04-13T11:17:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-026",
+        "title": "Social Posts: Simplicity-Voice-Transformation Pack",
+        "type": "social",
+        "description": "3 posts on stupid-simple challenges, credentials vs personality debate, and transformation content's 4x save rate advantage",
+        "agent": "Scribe",
+        "createdAt": "2026-04-13T11:17:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-023",
         "title": "Newsletter: The Forge Dispatch — Three Truths",
@@ -276,7 +294,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 75,
-      "lastUpdate": "2026-04-12T11:17:00Z"
+      "lastUpdate": "2026-04-13T11:17:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -287,10 +305,16 @@
   ],
   "recentActivity": [
     {
+      "time": "2026-04-13T11:17:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content from Atlas 04-13 brief: micro-content beats production value (12-3-30), personality over credentials, transformation time-lapses get 4x saves"
+    },
+    {
       "time": "2026-04-12T11:17:00Z",
       "agent": "Scribe",
       "action": "Created newsletter + 3 social posts",
-      "details": "Content from Atlas 04-12 brief: hybrid as non-negotiable (45% market share), retention over acquisition (4/5 trainers stalled), AI as table stakes now"
+      "details": "Content from Atlas 04-12 brief: hybrid as non-negotiable (45% market share), retention beats acquisition (4/5 trainers stalled), AI as table stakes now"
     },
     {
       "time": "2026-04-11T11:17:00Z",
