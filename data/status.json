@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-13T11:17:00Z",
+  "lastUpdated": "2026-04-14T11:32:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-13T11:17:00Z"
+      "lastActivity": "2026-04-14T11:32:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-027",
+        "title": "Newsletter: The Hammer Meets the Data",
+        "type": "newsletter",
+        "description": "Three truths from Atlas 04-14 brief: hybrid is the new default (not a feature), data-driven coaching is table stakes, LinkedIn algorithm rewards personal over corporate",
+        "agent": "Scribe",
+        "createdAt": "2026-04-14T11:32:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-028",
+        "title": "Social Posts: Hybrid-Data-Authenticity Pack",
+        "type": "social",
+        "description": "3 posts on hybrid as baseline reality, data as the new iron, and authentic personal voice beating corporate content on LinkedIn",
+        "agent": "Scribe",
+        "createdAt": "2026-04-14T11:32:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-025",
         "title": "Newsletter: The Steel Doesn't Lie",
@@ -294,7 +312,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 75,
-      "lastUpdate": "2026-04-13T11:17:00Z"
+      "lastUpdate": "2026-04-14T11:32:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -304,6 +322,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-14T11:32:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content from Atlas 04-14 brief: hybrid is the new default (not a feature), data-driven coaching is table stakes, LinkedIn algorithm rewards personal over corporate"
+    },
     {
       "time": "2026-04-13T11:17:00Z",
       "agent": "Scribe",
