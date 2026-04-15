@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "2026-04-14T11:32:00Z",
+  "lastUpdated": "2026-04-15T11:32:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-14T11:32:00Z"
+      "lastActivity": "2026-04-15T11:32:00Z"
     },
     {
       "name": "Atlas",
       "role": "Market Intelligence",
       "status": "online",
       "currentTask": "Competitor pricing research complete",
-      "lastActivity": "2026-04-08T11:17:00Z"
+      "lastActivity": "2026-04-15T18:28:00Z"
     },
     {
       "name": "Athena",
@@ -39,6 +39,24 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-029",
+        "title": "Newsletter: Three Truths the Market Is Screaming",
+        "type": "newsletter",
+        "description": "Hybrid is the default reality (not a feature), data is the new iron (proof of work), LinkedIn wants personality not corporate voices",
+        "agent": "Scribe",
+        "createdAt": "2026-04-15T11:32:00Z",
+        "cost": 0
+      },
+      {
+        "id": "SCRIBE-2026-04-030",
+        "title": "Social Posts: Hybrid-Data-Voice Pack",
+        "type": "social",
+        "description": "3 posts on hybrid as default revenue model, data as proof of work for clients, and LinkedIn algorithm shift toward personal stories",
+        "agent": "Scribe",
+        "createdAt": "2026-04-15T11:32:00Z",
+        "cost": 0
+      },
       {
         "id": "SCRIBE-2026-04-027",
         "title": "Newsletter: The Hammer Meets the Data",
@@ -312,7 +330,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 75,
-      "lastUpdate": "2026-04-14T11:32:00Z"
+      "lastUpdate": "2026-04-15T11:32:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -322,6 +340,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-15T11:32:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Atlas search was down, so Scribe forged from existing market intelligence: hybrid is default reality, data is the new iron, LinkedIn rewards personal voice over corporate"
+    },
     {
       "time": "2026-04-14T11:32:00Z",
       "agent": "Scribe",
