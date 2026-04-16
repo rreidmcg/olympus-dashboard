@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-15T11:32:00Z",
+  "lastUpdated": "2026-04-16T11:32:00Z",
   "agents": [
     {
       "name": "Scribe",
       "role": "Chief Content Officer",
       "status": "online",
       "currentTask": "Drafts ready for approval",
-      "lastActivity": "2026-04-15T11:32:00Z"
+      "lastActivity": "2026-04-16T11:32:00Z"
     },
     {
       "name": "Atlas",
@@ -39,6 +39,26 @@
   ],
   "contentPipeline": {
     "pendingApproval": [
+      {
+        "id": "SCRIBE-2026-04-031",
+        "title": "Newsletter: The Anvil of Specialization",
+        "type": "newsletter",
+        "description": "Three truths from Atlas 04-16 brief: endurance coaching is a blue ocean (competitors have zero endurance analytics), white-label apps are now table stakes, automation is survival for time-constrained founders",
+        "agent": "Scribe",
+        "createdAt": "2026-04-16T11:32:00Z",
+        "cost": 0,
+        "file": "newsletter-april-endurance-specialization.md"
+      },
+      {
+        "id": "SCRIBE-2026-04-032",
+        "title": "Social Posts: Endurance Gap & Platform Specialization Pack",
+        "type": "social",
+        "description": "3 posts on endurance athlete blindspot in major platforms, white-label as credibility baseline, and automation as survival strategy for paycheck-to-paycheck founders",
+        "agent": "Scribe",
+        "createdAt": "2026-04-16T11:32:00Z",
+        "cost": 0,
+        "file": "social-posts-april-endurance-automation.md"
+      },
       {
         "id": "SCRIBE-2026-04-029",
         "title": "Newsletter: Three Truths the Market Is Screaming",
@@ -331,7 +351,7 @@
       "name": "Content Pipeline",
       "status": "active",
       "progress": 75,
-      "lastUpdate": "2026-04-15T11:32:00Z"
+      "lastUpdate": "2026-04-16T11:32:00Z"
     },
     {
       "name": "OLYMPUS Dashboard",
@@ -341,6 +361,12 @@
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-04-16T11:32:00Z",
+      "agent": "Scribe",
+      "action": "Created newsletter + 3 social posts",
+      "details": "Content from Atlas 04-16 brief: endurance coaching gap in major platforms, white-label as table stakes, automation as survival strategy for time-constrained founders"
+    },
     {
       "time": "2026-04-15T11:32:00Z",
       "agent": "Scribe",
