@@ -46,7 +46,8 @@
         "description": "Hybrid is the default reality (not a feature), data is the new iron (proof of work), LinkedIn wants personality not corporate voices",
         "agent": "Scribe",
         "createdAt": "2026-04-15T11:32:00Z",
-        "cost": 0
+        "cost": 0,
+        "file": "newsletter-april-hybrid-data-voice.md"
       },
       {
         "id": "SCRIBE-2026-04-030",
